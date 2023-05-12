@@ -1,28 +1,121 @@
-.example {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #2f2f37;
-  max-width: 960px;
-  padding: 16px;
+body.light-theme {
+  background-color: white;
 }
 
-.example code {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: #ff6b0a;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+body.dark-theme {
+  background-color: black;
 }
 
-.example .background {
-  height: 240px;
-  // ❗️❗️❗️ The path to images from a SASS file
-  // is always the same as from the css folder.
-  background-image: url('../images/logo.png');
-  background-size: cover;
-  background-position: center;
+// .toolbar {
+//   padding: 10px 14px;
+//   margin-left: 24px;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+// }
+
+// .theme-switch {
+//   display: flex;
+//   align-items: center;
+// }
+
+.theme-switch__control {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  // width: 64px;
+  // height: 22px;
+  border-radius: 50em;
+  // padding: 3px 0;
+  // box-shadow: inset 0.5px 0.5px 1px #babecc,
+  //   inset -0.5px -0.5px 1px rgb(97, 7, 7);
+
+  // &:focus,
+  // &:hover,
+  // &:checked {
+  //   box-shadow: inset 0.5px 0.5px 0.5px #babecc,
+  //     inset -0.5px -0.5px 0.5px rgb(97, 7, 7);
+  // }
 }
+
+.theme-switch__toggle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+}
+
+.theme-switch__track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  // color: transparent;
+  user-select: none;
+  // background-color: transparent;
+  background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: inherit;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.theme-switch__marker {
+  position: relative;
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: inset 0.5px 0.5px 1px #f1f3fb, inset -0.5px -0.5px 1px #fff;
+  transform: translateX(1px);
+  transition: transform 250ms linear;
+
+  // &:focus {
+  //   box-shadow: inset 0.5px 0.5px 1px #e4e3e3, inset -0.5px -0.5px 1px #fff;
+  // }
+}
+
+.theme-switch__toggle:checked + .theme-switch__track {
+  background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.theme-switch__toggle:checked ~ .theme-switch__marker {
+  transform: translateX(21px);
+  background-color: white;
+}
+
+.theme-switch__toggle:not(:checked) ~ .theme-switch__marker {
+  background-color: white;
+}
+
+//-------------------------------------
+// .hidden {
+//   display: none;
+// }
+// .icon_light_theme {
+//   position: absolute;
+//   top: 20px;
+// }
+// .icon_dark_theme {
+//   position: relative;
+//   top: 20px;
+// }
+
+// .light-theme {
+//   background-color: white;
+// }
+// .dark-theme {
+//   background-color: black;
+// }

@@ -1,37 +1,62 @@
-<article class="example" id="uk">
-  <h1>HTML-partials</h1>
+<!-- <div class="form-container">
+  <form class="search-form" id="search-form">
+    <input
+      type="text"
+      class="form-input"
+      name="searchQuery"
+      autocomplete="off"
+      placeholder="Search images..."
+    />
+    <button type="submit" class="form-button">Search</button>
+  </form>
+</div>
 
-  <!--
-    ❗️❗️❗️ The path to images from the HTML partial
-    is the same as from the index.html file
-  -->
-  <img src="images/logo.png" alt="" width="320" />
-
-  <p>
-    The
-    <a
-      href="https://github.com/posthtml/posthtml-include"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      posthtml-include
-    </a>
-    plugin allows you to add code from other HTML files (fragments) to HTML page
-    files. Fragments are stored in the <code>src/partials</code> folder. The
-    addition occurs when compiling page files, such as <code>index.html</code>.
-  </p>
-
-  <p>
-    This <code>example.html</code> file is an example of such a snippet, with
-    the markup of a certain part of the main page. This is very convenient for
-    team development on student projects, when several people write in one HTML
-    file at once.
-  </p>
-
-  <p>
-    The syntax for adding a fragment to the main file is:
-    <code> &lt;include src="./partials/filename.html"&gt;&lt;/include&gt;</code>
-  </p>
-
-  <div class="background"></div>
-</article>
+<div class="gallery-container">
+  <div class="gallery">
+    <!-- Картки зображень -->
+<!-- </div> -->
+<!-- </div> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body class="js-light-theme">
+    <div class="toolbar">
+        <div class="theme-switch">
+          <div class="theme-switch__control">
+            <input class="theme-switch__toggle main-theme-switch__toggle" type="checkbox" name="theme" id="theme-switch-toggle"
+              aria-label="switch theme" />
+            <label aria-hidden="true" class="theme-switch__track" for="theme-switch-toggle">
+            </label>
+            <div aria-hidden="true" class="theme-switch__marker"></div>
+          </div>
+        </div>
+    <!-- <div class="theme">
+      <img
+        class="icon_light_theme"
+        width="40"
+        height="24"
+        src="./images/Switcher2.png"
+        alt=""
+      />
+      <img
+        class="icon_dark_theme"
+        width="40"
+        height="24"
+        src="./images/Switcher3.png"
+        alt=""
+      /> -->
+      <!-- <svg class="icon_light_theme" width="40" height="24">
+        <use href="./images/Switcher2.png"></use>
+      </svg>
+      <svg class="icon_dark_theme" width="40" height="24">
+        <use href="./images/Switcher2.png"></use>
+      </svg> -->
+    <!-- </div> -->
+  </body>
+</html>
+</html>
